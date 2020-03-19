@@ -7,4 +7,4 @@ str26SCS=(
 
 )
 list26SCS=str26SCS.split(',')
-print(len(list26SCS))
+# print(len(list26SCS))
