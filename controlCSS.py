@@ -30,6 +30,12 @@ class Css:
             #     print(parser[section])
             #     print(initNum)
 
+
+    def set26SCS(self):
+        import variable
+        list26SCS=variable.list26SCS
+        print(list26SCS)
+
     def setPy9(self):
         pass
 
@@ -39,4 +45,6 @@ class Css:
 __targetPath=r'D:\skins\test\port\gen.ini'
 __targetPath=r'D:\skins\test\port'
 
-Css(__targetPath).readCss('res\default.css')
+# Css(__targetPath).readCss('res\default.css')
+css=Css()
+css.set26SCS()

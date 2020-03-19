@@ -18,9 +18,11 @@ class SkinFramework:
             for numX in range(self.numX):
                 tupleVR=(numX*self.cellX,numY*self.cellY,self.cellX,self.cellY)
                 if numY==3:
-                    if numX==0 or numX==self.numX-2:
+                    if numX==0:
                         tupleVR=(numX*self.cellX,numY*self.cellY,int(self.cellX*1.5),self.cellY)
-                    elif numX==1 or numX==self.numX-1:
+                    elif numX==self.numX-1:
+                        tupleVR=(int((numX-0.5)*self.cellX),numY*self.cellY,int(self.cellX*1.5),self.cellY)
+                    elif numX==1:
                         continue
                     else:
                         tupleVR=(int((numX-0.5)*self.cellX),numY*self.cellY,self.cellX,self.cellY)
@@ -40,9 +42,11 @@ class SkinFramework:
     def test(self):
         pass
         # print(self.listVR)
+
         print(len(self.setList26VR()))
         
 
 sf=SkinFramework()
-print(*sf.setList26VR())
+import pprint
+pprint.pprint(sf.setList26VR())
 sf.test()   
