@@ -8,11 +8,11 @@ class SkinFramework:
         self.cellY=int(self.y/self.numY)
         self.y=self.y-self.cellY
         self.numY=self.numY-1
-        self.listVR=[]
-
+        
         
 
-    def setVR(self):
+    def setList26VR(self):
+        list26VR=[]
 
         for numY in range(self.numY):
             for numX in range(self.numX):
@@ -24,20 +24,25 @@ class SkinFramework:
                         continue
                     else:
                         tupleVR=(int((numX-0.5)*self.cellX),numY*self.cellY,self.cellX,self.cellY)
-               
-                print(str(tupleVR)[1:-1])
-                self.listVR.append(str(tupleVR)[1:-1])
+                elif numY==self.numY-1:
+                    if numX==4:
+                        tupleVR=(numX*self.cellX,numY*self.cellY,int(self.cellX*2),self.cellY)
+                    elif numX>4:
+                        continue
+
+                list26VR.append(str(tupleVR)[1:-1])
+        return list26VR
                 
 
-        pass
+        
 
 
     def test(self):
         pass
         # print(self.listVR)
-        print(len(self.listVR))
+        print(len(self.setList26VR()))
         
 
 sf=SkinFramework()
-sf.setVR()
+print(*sf.setList26VR())
 sf.test()   
