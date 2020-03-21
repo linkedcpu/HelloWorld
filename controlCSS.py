@@ -75,6 +75,9 @@ class Css:
 __targetPath=r'D:\skins\test\port\gen.ini'
 __targetPath=r'D:\skins\test\port'
 
+
+
+pass
 # Css(__targetPath).readCss('res\default.css')
 css=Css()
 css.set26SCS()
